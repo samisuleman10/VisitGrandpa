@@ -1,10 +1,13 @@
-﻿namespace GrandpaVisit
+﻿using System;
+
+namespace GrandpaVisit
 {
+    [Serializable]
     public class Block
     {
-        private string text;
-        private string headline;
-        private string id;
-        private Option[] options;
+        public string text;
+        public string headline;
+        public string id;
+        public Option[] options;
     }
 }

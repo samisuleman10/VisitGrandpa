@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866de5792f341d54d8e3b55427645926, type: 3}
   m_Name: samilib
   m_EditorClassIdentifier: 
-  ShakePresets: []
+  ShakePresets:
+  - Name: vfdthrdfjyugkuy
+    xPosStrength: 0
+    yPosStrength: 0
+    RotationStrength: 0
+    ScaleStrength: 0

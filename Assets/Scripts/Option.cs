@@ -1,8 +1,11 @@
-﻿namespace GrandpaVisit
+﻿using System;
+
+namespace GrandpaVisit
 {
+    [Serializable]
     public class Option
     {
-        private string text;
-        private string followup; //this is a block id
+        public string text;
+        public string followup; //this is a block id
     }
 }

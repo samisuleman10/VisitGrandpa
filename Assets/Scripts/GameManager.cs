@@ -20,6 +20,12 @@ namespace GrandpaVisit
                 Destroy(gameObject);
             }
         }
+        
+        private void Start()
+        {
+            var parseClass = new ParseClass();
+            Blocks = parseClass.ReadAllBlocks("Blocks");
+        }
     
     }
 }

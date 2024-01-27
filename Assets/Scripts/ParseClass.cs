@@ -9,20 +9,4 @@ namespace GrandpaVisit
     {
         
     }
-
-    [Serializable]
-    public class Block
-    {
-        private string text;
-        private string headline;
-        private string id;
-        private Option[] options;
-    }
-    
-    [Serializable]
-    public class Option
-    {
-        private string text;
-        private string followup; //this is a block id
-    }
 }

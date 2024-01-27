@@ -1,0 +1,48 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -1000,
+      "maxPointsIncl": -1,
+      "text": "No reaction. She just stares at the cars driving past."
+    },
+    {
+      "minPointsIncl": 0,
+      "maxPointsIncl": 0,
+      "text": "Has she just turned her head a little in your direction?"
+    },
+    {
+      "minPointsIncl": 1,
+      "maxPointsIncl": 1,
+      "text": "She moans softly."
+    },
+    {
+      "minPointsIncl": 2,
+      "maxPointsIncl": 2,
+      "text": "Who is there?"
+    }
+  ],
+  "Unit": 0,
+  "id": "02",
+  "Actions": [
+    {
+      "text": "Hey Grandma, how are you?",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "There she is! My favorite Grammy!!!",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "Just knock on something to draw attention to you",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "Hey Grammy, Mom says hi!",
+      "followup": null,
+      "points": -1
+    }
+  ]
+}

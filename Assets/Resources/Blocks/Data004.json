@@ -1,0 +1,34 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -1000,
+      "maxPointsIncl": 1000,
+      "text": "She looks at you with curiosity, waiting for an answer."
+    }
+  ],
+  "Unit": -1,
+  "id": "04",
+  "Actions": [
+    {
+      "text": "It’s me, your grandchild",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "It’s me, Napoleon Bonaparte",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "Doesn’t make a difference who I am, does it?",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "Do I really have to tell you?",
+      "followup": null,
+      "points": -1
+    }
+    
+  ]
+}

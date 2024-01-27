@@ -6,6 +6,7 @@ namespace GrandpaVisit
     public class Option
     {
         public string text;
-        public string followup; //this is a block id
+        public string followup; //this is a block is;
+        public int points;
     }
 }

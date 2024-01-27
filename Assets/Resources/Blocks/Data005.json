@@ -1,0 +1,19 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -1000,
+      "maxPointsIncl": 1000,
+      "text": "'Shut up', she yells at you"
+    }
+  ],
+  "Unit": -1,
+  "id": "05",
+  "Actions": [
+    {
+      "text": "you concurr",
+      "followup": null,
+      "points": 0
+    }
+    
+  ]
+}

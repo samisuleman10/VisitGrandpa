@@ -11,12 +11,14 @@ namespace GrandpaVisit
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
+        public MusicManager musicManager;
         public Dictionary<string, Block> Blocks = new Dictionary<string, Block>();
         public TextTyper TextTyperSituation;
         public int[] minPointRequirements;
         public string[] startIds;
         public string[] mainIds = new string[6];
         public int Points;
+        private int totalPoints = 0;
         private int unit = 0;
 
         public GameObject ActionButtonPrefab;
@@ -40,13 +42,13 @@ namespace GrandpaVisit
             var parseClass = new ParseClass();
             Blocks = parseClass.ReadAllBlocks("Blocks");
             buildMainIds();
-            DisplayBlock(startIds[0]);
+            StartCoroutine(DisplayBlock(startIds[0]));
         }
 
-        private void DisplayBlock(string id)
+        private IEnumerator DisplayBlock(string id)
         {
             Debug.Log(id);
-            TextTyperSituation.TypeText(Blocks[id].GetReaction(Points).text);
+            
             if (actionButton!= null)
             {
                 foreach (Transform child in ActionButtonParent)
@@ -55,14 +57,36 @@ namespace GrandpaVisit
                 }
             }
 
+            TextTyperSituation.TypeText(Blocks[id].GetReaction(Points).text);
+
+            yield return new WaitUntil(() => !TextTyperSituation.IsTyping);
+
+            float nextYPosition = 0;// TextTyperSituation.GetComponent<RectTransform>().rect.y - TextTyperSituation.GetComponent<RectTransform>().rect.height;
+
             foreach (var option in Blocks[id].Actions)
             {
                 actionButton = Instantiate(ActionButtonPrefab, ActionButtonParent);
-                actionButton.GetComponentInChildren<TextMeshProUGUI>().text = option.text;
+                actionButton.transform.position = new Vector2(100/*TextTyperSituation.GetComponent<RectTransform>().rect.x*/, nextYPosition + actionButton.GetComponent<RectTransform>().rect.height / 2);
                 actionButton.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     OnActionClicked(option);
                 });
+                var textMesh = actionButton.GetComponentInChildren<TextMeshProUGUI>();
+                textMesh.text = option.text;
+                StartCoroutine(fadeInButton(textMesh));
+                yield return new WaitUntil(() => textMesh.color.a >= 0.8);
+                nextYPosition += actionButton.GetComponent<RectTransform>().rect.height;
+            }
+        }
+
+        private IEnumerator fadeInButton(TextMeshProUGUI textMesh)
+		{
+            Color c = textMesh.color;
+            for (float alpha = 0f; alpha <= 1; alpha += 0.01f)
+            {
+                c.a = alpha;
+                textMesh.color = c;
+                yield return new WaitForSeconds(.02f);
             }
         }
         
@@ -70,35 +94,33 @@ namespace GrandpaVisit
         {
             Debug.Log("Action clicked" + option.text);
             Points += option.points;
+            musicManager.updateMusic(unit, Points);
+            string id = "NONE";
             if (string.IsNullOrEmpty(option.followup))
             {
                 if (checkUnitSwitched(Points))
                 {
-                    DisplayBlock(startIds[unit]);
+                    unit++;
+                    totalPoints += Points;
+                    Points = 0;
+                    id = startIds[unit];
                 }
                 else
                 {
-                    DisplayBlock(getMainId(Points));
+                    id = getMainId(unit);
                 }
                 
             }
             else
             {
-                DisplayBlock(option.followup);
+                id = option.followup;
             }
+            StartCoroutine(DisplayBlock(id));
         }
 
-        private string getMainId(int points)
+        private string getMainId(int unit)
         {
-            for (int i = 0; i < minPointRequirements.Length; i++)
-            {
-                if (points >= minPointRequirements[i])
-                {
-                    return mainIds[i];
-                }
-            }
-
-            return null;
+            return mainIds[unit];
         }
 
         private bool checkUnitSwitched(int points)

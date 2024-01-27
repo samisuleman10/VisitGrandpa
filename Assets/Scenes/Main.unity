@@ -657,9 +657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextTyperSituation: {fileID: 1802556099}
-  minPointRequirements: 18fcffffe8030000
+  minPointRequirements: 18fcffff03000000e8030000
   startIds:
   - 01
+  - 04
   mainIds:
   - 
   - 

@@ -1,18 +1,18 @@
 {
   "Reactions": [
     {
-      "minPointsIncl": -1000,
-      "maxPointsIncl": -1,
+      "minPointsIncl": -3,
+      "maxPointsIncl": -2,
       "text": "No reaction. She just stares at the cars driving past."
     },
     {
-      "minPointsIncl": 0,
-      "maxPointsIncl": 0,
+      "minPointsIncl": -3,
+      "maxPointsIncl": 2,
       "text": "Has she just turned her head a little in your direction?"
     },
     {
-      "minPointsIncl": 1,
-      "maxPointsIncl": 1,
+      "minPointsIncl": -3,
+      "maxPointsIncl": 2,
       "text": "She moans softly."
     },
     {

@@ -74,13 +74,24 @@ namespace GrandpaVisit
                 });
                 var textMesh = actionButton.GetComponentInChildren<TextMeshProUGUI>();
                 textMesh.text = option.text;
+                
+                //
+                Color c = textMesh.color;
+                c.a = 0;
+                textMesh.color = c;
+            }
+            
+            foreach (Transform child in ActionButtonParent)
+            {
+                var textMesh = child.GetComponentInChildren<TextMeshProUGUI>();
+                child.gameObject.SetActive(true);
                 StartCoroutine(fadeInButton(textMesh));
                 yield return new WaitUntil(() =>
                 {
                     return textMesh.color.a >= optionsTime;
                 });
-                nextYPosition += actionButton.GetComponent<RectTransform>().rect.height;
             }
+            
         }
 
         private IEnumerator fadeInButton(TextMeshProUGUI textMesh)

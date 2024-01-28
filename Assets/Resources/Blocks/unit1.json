@@ -32,17 +32,12 @@
     {
       "text": "„Just knock on something to draw attention to you“",
       "followup": null,
-      "points": 0
+      "points": -1
     },
     {
       "text": "„Hey Granny, Mom says hi!“",
       "followup": null,
       "points": 1
-    },
-    {
-      "text": "„Enjoying the view?“",
-      "followup": null,
-      "points": -1
     }
   ]
 }

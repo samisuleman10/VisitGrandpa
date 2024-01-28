@@ -24,6 +24,7 @@ namespace GrandpaVisit
         public GameObject ActionButtonPrefab;
         public Transform ActionButtonParent;
         GameObject actionButton;
+        public double optionsTime = 0.8;
         private void Awake()
         {
             if (Instance == null)
@@ -74,7 +75,10 @@ namespace GrandpaVisit
                 var textMesh = actionButton.GetComponentInChildren<TextMeshProUGUI>();
                 textMesh.text = option.text;
                 StartCoroutine(fadeInButton(textMesh));
-                yield return new WaitUntil(() => textMesh.color.a >= 0.8);
+                yield return new WaitUntil(() =>
+                {
+                    return textMesh.color.a >= optionsTime;
+                });
                 nextYPosition += actionButton.GetComponent<RectTransform>().rect.height;
             }
         }

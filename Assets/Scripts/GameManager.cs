@@ -14,6 +14,7 @@ namespace GrandpaVisit
         public MusicManager musicManager;
         public Dictionary<string, Block> Blocks = new Dictionary<string, Block>();
         public TextTyper TextTyperSituation;
+        public TextTyper TextTyperReaction;
         public int[] minPointRequirements;
         public string[] startIds;
         public string[] mainIds = new string[6];
@@ -48,10 +49,10 @@ namespace GrandpaVisit
             StartCoroutine(DisplayBlock(startIds[0]));
         }
 
-        private IEnumerator DelayForSeconds(float seconds, string id)
+        private IEnumerator DelayBeforeDisplayBlocks(float seconds, string id , Option option)
         {
             yield return new WaitForSeconds(seconds);
-            
+            SetTextReaction(option.text);
             StartCoroutine(DisplayBlock(id));
         }
 
@@ -66,7 +67,8 @@ namespace GrandpaVisit
                     Destroy(child.gameObject);
                 }
             }
-
+            TextTyperSituation.TypeText("");
+            yield return new WaitForSeconds(waitTimeAfterSelection);
             TextTyperSituation.TypeText(Blocks[id].GetReaction(Points).text);
 
             yield return new WaitUntil(() => !TextTyperSituation.IsTyping);
@@ -139,8 +141,14 @@ namespace GrandpaVisit
             }
             var buttonIndex = 0;
 
-            // some delay here with coroutine
-            StartCoroutine(DelayForSeconds(waitTimeAfterSelection, id));
+            // some delay before displaying the next block
+            StartCoroutine(DelayBeforeDisplayBlocks(waitTimeAfterSelection, id, option));
+            
+        }
+        
+        private void SetTextReaction(string text)
+        {
+            TextTyperReaction.TypeText(text);
         }
 
         private string getMainId(int unit)

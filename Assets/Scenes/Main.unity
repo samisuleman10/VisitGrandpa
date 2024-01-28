@@ -729,7 +729,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b9ae5b086c868174cb2601f25d1e8096, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d802eae9dbb5e6b4580acb3110c95dca, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -1531,6 +1531,7 @@ MonoBehaviour:
   ActionButtonPrefab: {fileID: 966872048923324073, guid: efc5016ffe39117449e8b797a804d5bb, type: 3}
   ActionButtonParent: {fileID: 2136760521}
   optionsTime: 0.4
+  waitTimeAfterSelection: 1.2
 --- !u!4 &1911042240
 Transform:
   m_ObjectHideFlags: 0

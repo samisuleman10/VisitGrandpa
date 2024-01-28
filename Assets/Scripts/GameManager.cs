@@ -25,6 +25,8 @@ namespace GrandpaVisit
         public Transform ActionButtonParent;
         GameObject actionButton;
         public double optionsTime = 0.8;
+        
+        public float waitTimeAfterSelection = 1.1f;
         private void Awake()
         {
             if (Instance == null)
@@ -46,6 +48,13 @@ namespace GrandpaVisit
             StartCoroutine(DisplayBlock(startIds[0]));
         }
 
+        private IEnumerator DelayForSeconds(float seconds, string id)
+        {
+            yield return new WaitForSeconds(seconds);
+            
+            StartCoroutine(DisplayBlock(id));
+        }
+
         private IEnumerator DisplayBlock(string id)
         {
             Debug.Log(id);
@@ -63,7 +72,6 @@ namespace GrandpaVisit
             yield return new WaitUntil(() => !TextTyperSituation.IsTyping);
 
             float nextYPosition = 0;// TextTyperSituation.GetComponent<RectTransform>().rect.y - TextTyperSituation.GetComponent<RectTransform>().rect.height;
-
             foreach (var option in Blocks[id].Actions)
             {
                 actionButton = Instantiate(ActionButtonPrefab, ActionButtonParent);
@@ -75,7 +83,6 @@ namespace GrandpaVisit
                 var textMesh = actionButton.GetComponentInChildren<TextMeshProUGUI>();
                 textMesh.text = option.text;
                 
-                //
                 Color c = textMesh.color;
                 c.a = 0;
                 textMesh.color = c;
@@ -130,7 +137,10 @@ namespace GrandpaVisit
             {
                 id = option.followup;
             }
-            StartCoroutine(DisplayBlock(id));
+            var buttonIndex = 0;
+
+            // some delay here with coroutine
+            StartCoroutine(DelayForSeconds(waitTimeAfterSelection, id));
         }
 
         private string getMainId(int unit)

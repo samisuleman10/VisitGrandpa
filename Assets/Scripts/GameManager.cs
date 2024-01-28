@@ -63,6 +63,7 @@ namespace GrandpaVisit
             var parseClass = new ParseClass();
             Blocks = parseClass.ReadAllBlocks("Blocks");
             buildMainIds();
+            TextTyperReaction.TypeText(". . .");
             StartCoroutine(DisplayBlock(startIds[0]));
         }
         

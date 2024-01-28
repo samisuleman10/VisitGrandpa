@@ -20,7 +20,7 @@ namespace GrandpaVisit
         public TextTyper TextTyperReaction;
         public int[] minPointRequirements;
         public string[] startIds;
-        public string[] mainIds = new string[6];
+        private string[] mainIds = new string[10];
         public int Points;
         private int totalPoints = 0;
         private int unit = 0;
@@ -213,6 +213,7 @@ namespace GrandpaVisit
             {
                 if (block.Unit >= 0)
                 {
+                    Debug.Log(block.id + " -> " + block.Unit);
                     mainIds[block.Unit] = block.id;
                 }
             }

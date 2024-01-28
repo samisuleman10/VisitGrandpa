@@ -1604,17 +1604,17 @@ MonoBehaviour:
   musicManager: {fileID: 1709784646}
   TextTyperSituation: {fileID: 1802556099}
   TextTyperReaction: {fileID: 2077011186}
-  minPointRequirements: 18fcffff03000000e8030000
+  minPointRequirements: 18fcffff03000000030000000300000003000000030000000300000003000000e8030000
   startIds:
-  - 01
-  - 04
-  mainIds:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - unit1_intro
+  - unit2_intro
+  - unit3_intro
+  - unit4_intro
+  - unit5_intro
+  - unit6_intro
+  - unit7_intro
+  - end1
+  - end1
   Points: 0
   ActionButtonPrefab: {fileID: 966872048923324073, guid: efc5016ffe39117449e8b797a804d5bb, type: 3}
   ActionButtonParent: {fileID: 2136760521}

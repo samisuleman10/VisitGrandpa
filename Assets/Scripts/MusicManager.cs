@@ -35,16 +35,16 @@ namespace GrandpaVisit
                             volumeTarget = new float[] { 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
                             break;
                         case -1:
-                            volumeTarget = new float[] { 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                            volumeTarget = new float[] { 0.2f, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
                             break;
                         case 0:
                             volumeTarget = new float[] { 1, 0.8f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
                             break;
                         case 1:
-                            volumeTarget = new float[] { 1, 0.4f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                            volumeTarget = new float[] { 1, 0.4f, 0.2f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
                             break;
                         case 2:
-                            volumeTarget = new float[] { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                            volumeTarget = new float[] { 1, 0, 0.4f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
                             break;
 					}
                     break;
@@ -124,7 +124,7 @@ namespace GrandpaVisit
                             volumeTarget = new float[] { 1, 0, 1, 1, 0, 0, 0, 0.3f, 1, 0.3f, 0, 0, 0, 0 };
                             break;
                         case 2:
-                            volumeTarget = new float[] { 1, 0, 1, 1, 0, 0, 0, 0.3f, 1, 0.3f, 0, 0, 0, 0 };
+                            volumeTarget = new float[] { 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 };
                             break;
                     }
                     break;
@@ -144,7 +144,7 @@ namespace GrandpaVisit
                             volumeTarget = new float[] { 1, 0, 1, 1, 0, 0, 0, 0, 0, 0.3f, 1, 0.3f, 0, 0 };
                             break;
                         case 2:
-                            volumeTarget = new float[] { 1, 0, 1, 1, 0, 0, 0, 0, 0, 0.3f, 1, 0.3f, 0, 0 };
+                            volumeTarget = new float[] { 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0 };
                             break;
                     }
                     break;

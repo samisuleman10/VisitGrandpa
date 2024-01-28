@@ -65,6 +65,7 @@ namespace GrandpaVisit
             buildMainIds();
             TextTyperReaction.TypeText(". . .");
             StartCoroutine(DisplayBlock(startIds[0]));
+            musicManager.updateMusic(unit, Points);
         }
         
         private void RestartGame()
@@ -167,6 +168,7 @@ namespace GrandpaVisit
                     totalPoints += Points;
                     Points = 0;
                     id = startIds[unit];
+                    musicManager.updateMusic(unit, Points);
                 }
                 else
                 {

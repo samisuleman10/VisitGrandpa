@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -11,6 +12,8 @@ namespace GrandpaVisit
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
+        public GameObject StartScreen;
+        public GameObject GameScreen;
         public MusicManager musicManager;
         public Dictionary<string, Block> Blocks = new Dictionary<string, Block>();
         public TextTyper TextTyperSituation;
@@ -39,14 +42,45 @@ namespace GrandpaVisit
             {
                 Destroy(gameObject);
             }
+            GameScreen.SetActive(false);
         }
         
         private void Start()
+        {
+            StartScreen.SetActive(true);
+            GameScreen.SetActive(false);
+        }
+        
+        public void StartGame()
+        {
+            StartScreen.SetActive(false);
+            GameScreen.SetActive(true);
+            InitGame();
+        }
+
+        private void InitGame()
         {
             var parseClass = new ParseClass();
             Blocks = parseClass.ReadAllBlocks("Blocks");
             buildMainIds();
             StartCoroutine(DisplayBlock(startIds[0]));
+        }
+        
+        private void RestartGame()
+        {
+            unit = 0;
+            totalPoints = 0;
+            Points = 0;
+            StartGame();
+        }
+
+        private void Update()
+        {
+            // f1 to restart
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                RestartGame();
+            }
         }
 
         private IEnumerator DelayBeforeDisplayBlocks(float seconds, string id , Option option)
@@ -118,6 +152,10 @@ namespace GrandpaVisit
         {
             Debug.Log("Action clicked" + option.text);
             Points += option.points;
+            if (Points < -2)
+            {
+                Points = -2;
+            }
             musicManager.updateMusic(unit, Points);
             string id = "NONE";
             if (string.IsNullOrEmpty(option.followup))

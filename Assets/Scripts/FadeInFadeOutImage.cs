@@ -10,15 +10,15 @@ namespace GrandpaVisit
     public class FadeInFadeOutImage : MonoBehaviour
     {
         public Image imageFade;
-        public float fadeTime = 1f;
+
         public float waitTime = 1f;
-        public float fadeOutTime = 1f;
-        
+
         void Start()
         {
             imageFade = GetComponent<Image>();
             FadeIn();
         }
+        
 
         private void FadeIn()
         {
@@ -32,7 +32,7 @@ namespace GrandpaVisit
             for (float alpha = 0f; alpha <= 1f; alpha += 0.005f)
             {
                     imageFade.color = new Color(1f, 1f, 1f, alpha);
-                    yield return new WaitForSeconds(.02f);
+                    yield return new WaitForSeconds(.01f);
             }
 
             yield return new WaitForSeconds(waitTime);
@@ -46,8 +46,9 @@ namespace GrandpaVisit
             for (float alpha = 0f; alpha <= 1f; alpha += 0.005f)
             {
                 imageFade.color = new Color(1f, 1f, 1f, 1f - alpha);
-                yield return new WaitForSeconds(.015f);
+                yield return new WaitForSeconds(.01f);
             }
+            GameManager.Instance.StartGame();
             gameObject.SetActive(false);
             // yield return new WaitForSeconds(waitTime);
         }

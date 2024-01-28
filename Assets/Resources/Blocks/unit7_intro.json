@@ -1,0 +1,33 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -20,
+      "maxPointsIncl": 20,
+      "text": "Suddenly she throws her ice cream bowl on the floor with a big swoop. „I don't want to talk about this anymore! Leave me be!“\n\nShe looks sadly at the broken glass in a puddle of melted ice cream on the floor. "
+    }
+  ],
+  "Unit": -1,
+  "id": "unit7_intro",
+  "Actions": [
+     {
+      "text": "„Please tell me you made all this up!“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„Why did you throw your ice cream on the floor?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„So what happens now?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Look what you have done!“",
+      "followup": null,
+      "points": 1
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She presses her lips together and does not want to say anything."
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She begins to play nervously with her spoon. "
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„I don’t know“"
+    }
+  ],
+  "Unit": 4,
+  "id": "unit5",
+  "Actions": [
+    {
+      "text": "„Yeah, sure...“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„Then how did she have me?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„And my dad is Napoleon, sure“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„So you are saying that I'm not my mother's child?“",
+      "followup": null,
+      "points": 1
+    }
+  ]
+}

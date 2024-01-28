@@ -1,0 +1,48 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "No reaction. She just stares at the cars driving past. Maybe she didn't hear you?"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She turns her head a little in your direction but doesn't say anything. Did she not hear you?"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She moans softly and ignores you."
+    }
+  ],
+  "Unit": 0,
+  "id": "unit1",
+  "Actions": [
+    {
+      "text": "„Hey Grandma, how are you?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„There she is! My favorite Granny!“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„Just knock on something to draw attention to you“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Hey Granny, Mom says hi!“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„Enjoying the view?“",
+      "followup": null,
+      "points": -1
+    }
+  ]
+}

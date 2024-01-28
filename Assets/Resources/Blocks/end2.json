@@ -1,0 +1,14 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -20,
+      "maxPointsIncl": 20,
+      "text": "Press F1 to Restart"
+    }
+  ],
+  "Unit": -1,
+  "id": "end2",
+  "Actions": [
+    
+  ]
+}

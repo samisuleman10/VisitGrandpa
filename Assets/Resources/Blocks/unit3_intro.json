@@ -1,0 +1,33 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -100,
+      "maxPointsIncl": 100,
+      "text": "„Didn't we always eat ice cream? I want an ice cream!“\n\nYou call the nurse. „Could you bring us some ice cream, please?“. The nurse nods and leaves. Five minutes later, there's a bowl of ice cream in front of you. It melts away without either of you touching it"
+    }
+  ],
+  "Unit": -1,
+  "id": "unit3_intro",
+  "Actions": [
+    {
+      "text": "„Are we finished eating?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Isn't this your favorite flavor?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„It used to taste better, right?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„You want me to put it in the fridge, for later?“",
+      "followup": null,
+      "points": -1
+    }
+  ]
+}

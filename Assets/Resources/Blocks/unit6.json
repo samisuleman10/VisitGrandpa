@@ -1,0 +1,43 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She presses her lips together and does not want to say anything."
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She looks at you. „Stop asking me all these Questions!“"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„I don’t know“"
+    }
+  ],
+  "Unit": 5,
+  "id": "unit6",
+  "Actions": [
+    {
+      "text": "„You are making this up, aren’t you?“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„What did you just say?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„You mean my mum, your daughter, adopted me?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„I’m adopted?“",
+      "followup": null,
+      "points": 0
+    }
+  ]
+}

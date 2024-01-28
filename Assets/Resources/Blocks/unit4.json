@@ -1,0 +1,43 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„Let me be!“"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She ignores you and eats a spoonful of half-melted ice cream"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„I want to take a nap now“"
+    }
+  ],
+  "Unit": 3,
+  "id": "unit4",
+  "Actions": [
+    {
+      "text": "„Again: I am your grandchild“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Yes that's me - the one who visits you every week“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„Have you forgotten?“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„So who do you think I am then?“",
+      "followup": null,
+      "points": 1
+    }
+  ]
+}

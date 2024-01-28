@@ -1,0 +1,43 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She shakes her head"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„No.“"
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She looks at you blankly"
+    }
+  ],
+  "Unit": 6,
+  "id": "unit7",
+  "Actions": [
+    {
+      "text": "„Please tell me you made all this up!“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„Why did you throw your ice cream on the floor?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„So what happens now?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Look what you have done!“",
+      "followup": null,
+      "points": 1
+    }
+  ]
+}

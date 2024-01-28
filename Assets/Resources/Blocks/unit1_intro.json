@@ -1,0 +1,38 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -1000,
+      "maxPointsIncl": 1000,
+      "text": "Just like every Saturday, you visit your grandmom in the cheap retirement center in the outskirts. She sits in her small room and looks out of the window at the four-lane highway, silent and absent as ever. When you were younger, she was super funny, but in recent years she has become increasingly quiet and grumpy."
+    }
+  ],
+  "Unit": -1,
+  "id": "unit1_intro",
+  "Actions": [
+    {
+      "text": "„Hey Grandma, how are you?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„There she is! My favorite Granny!“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„Just knock on something to draw attention to you“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Hey Granny, Mom says hi!“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„Enjoying the view?“",
+      "followup": null,
+      "points": -1
+    }
+  ]
+}

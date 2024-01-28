@@ -1,0 +1,43 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "No reaction. Her eyes follow a fly at the window."
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She moans softly."
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„Whatever...“"
+    }
+  ],
+  "Unit": 1,
+  "id": "unit2",
+  "Actions": [
+    {
+      "text": "„It’s me, your grandchild“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "You wink at her. „It’s me, Napoleon Bonaparte“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„Doesn’t make a difference who I am, does it?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Do I really have to tell you?“",
+      "followup": null,
+      "points": -1
+    }
+  ]
+}

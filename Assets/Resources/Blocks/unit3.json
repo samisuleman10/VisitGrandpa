@@ -1,0 +1,43 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She closes her eyes for a moment. Is she slumbering away? "
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "She looks at her spoon."
+    },
+    {
+      "minPointsIncl": -2,
+      "maxPointsIncl": 2,
+      "text": "„Don’t touch my icecream!“"
+    }
+  ],
+  "Unit": 2,
+  "id": "unit3",
+  "Actions": [
+    {
+      "text": "„Are we finished eating?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Isn't this your favorite flavor?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„It used to taste better, right?“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„You want me to put it in the fridge, for later?“",
+      "followup": null,
+      "points": -1
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -20,
+      "maxPointsIncl": 20,
+      "text": "„Please, I thought you come here to cheer me up. Make me laugh“\n\nShe looks at you with wide eyes. For the first time, you feel like you're seeing your beloved old grandma again."
+    }
+  ],
+  "Unit": 7,
+  "id": "end1",
+  "Actions": [
+    {
+      "text": "You get up and leave without another word.",
+      "followup": "end2",
+      "points": -1
+    },
+    {
+      "text": "You call for the nurse to clean up the mess „I think we need more ice cream“",
+      "followup": "end2",
+      "points": 0
+    },
+    {
+      "text": "You switch on the TV and sit next to her in silence.",
+      "followup": "end2",
+      "points": 1
+    },
+    {
+      "text": "„...“",
+      "followup": "end2",
+      "points": 0
+    }
+  ]
+}

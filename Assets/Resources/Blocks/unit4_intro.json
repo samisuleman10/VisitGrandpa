@@ -1,0 +1,33 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -100,
+      "maxPointsIncl": 200,
+      "text": "„You are not my grandchild.“\n\nShe turns her head and looks out of the window."
+    }
+  ],
+  "Unit": -1,
+  "id": "unit4_intro",
+  "Actions": [
+    {
+      "text": "„Again: I am your grandchild“",
+      "followup": null,
+      "points": 0
+    },
+    {
+      "text": "„Yes that's me - the one who visits you every week“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„Have you forgotten?“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„So who do you think I am then?“",
+      "followup": null,
+      "points": 1
+    }
+  ]
+}

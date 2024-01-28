@@ -1,0 +1,33 @@
+{
+  "Reactions": [
+    {
+      "minPointsIncl": -20,
+      "maxPointsIncl": 20,
+      "text": "„Your mother is infertile.“\n\nInfertile... great, your grandmother seems to get worse every week."
+    }
+  ],
+  "Unit": -1,
+  "id": "unit5_intro",
+  "Actions": [
+    {
+      "text": "„Yeah, sure...“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„Then how did she have me?“",
+      "followup": null,
+      "points": 1
+    },
+    {
+      "text": "„And my dad is Napoleon, sure“",
+      "followup": null,
+      "points": -1
+    },
+    {
+      "text": "„So you are saying that I'm not my mother's child?“",
+      "followup": null,
+      "points": 1
+    }
+  ]
+}
